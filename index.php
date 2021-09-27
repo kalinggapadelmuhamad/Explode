@@ -1,18 +1,13 @@
 <?php 
 
-$text 	= file_get_contents("list.txt");
-$ex1 	= explode(',', $text);
-$banyak	= count($ex1);
+$list 		= file_get_contents("list.txt");
+$explode 	= explode(',', $list);
+$banyakData	= count($explode);
 
-// $hasil  = $ex1[1];
-// $res	= explode(" ",$hasil);
-// echo $res[3];
-// $banyak = count($ex1);
-
-for ($i=0; $i < $banyak ; $i++) { 
-	$res	=  explode(" ", $ex1[$i]);
-	echo $res[3];
-	echo "<br>";
+for ($i = 0; $i < $banyakData ; $i++) { 
+	$result	= explode(" ", $explode[$i]);
+	$result	= substr($result[3],1,-1);
+	echo $result."<br>";
 }
 
 
